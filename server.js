@@ -8,8 +8,9 @@ const port = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Serve static files (HTML, CSS, JS) from the 'public' folder
+// Serve static files from the 'public' folder
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 // Route to handle the form submission
 app.post('/submit-form', (req, res) => {
